@@ -52,3 +52,17 @@ Some simple user API created using Typescript, Express.JS and MongoDB (Mongoose 
 - Throws:
   - `400` for missing `username` or `password` fields in the body
   - `404` for if the user doesn't exist
+
+### `POST /user/logoff`
+- Request body (`form-data`):
+  ```
+  token: TOKEN
+  ```
+- Response body (status `200`):
+  ```json
+  {
+    "discontinued": "<BOOLEAN>",
+  }
+  ```
+- Throws:
+  - `400` for missing `token` field in the body
