@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-import { DATABASE } from "../env";
+import { DATABASE, MONGO_HOST, MONGO_PORT } from "../env";
 
 export async function connectDB() {
-  await mongoose.connect(`mongodb://127.0.0.1:27017/${DATABASE}`);
+  await mongoose.connect(`mongodb://${MONGO_HOST}:${MONGO_PORT}/${DATABASE}`);
 }
 
 export default connectDB;
